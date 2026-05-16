@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /?showAdmin=true
+
+Sitemap: https://constructoraacm1.com/sitemap.xml
