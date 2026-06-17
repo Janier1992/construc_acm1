@@ -83,11 +83,10 @@ export const Contact = () => {
 
           <div className="space-y-0 divide-y divide-slate-100" role="list">
             {[
-              { label: 'Sede Principal Medellín', val: '314 893 8973', icon: <Phone className="w-4 h-4" /> },
               { label: 'Correo Corporativo', val: 'constructoraacm1@outlook.com', icon: <Mail className="w-4 h-4" /> },
               { label: 'Ubicación Sede', val: 'Carrera 105 # 50-44, Medellín - Antioquia', icon: <MapPin className="w-4 h-4" /> },
               { label: 'Rep. Legal: Arinsson Cossio', val: '311 362 2172', icon: <User className="w-4 h-4" /> },
-              { label: 'Gte. Suplente: Eloy Moreno', val: '314 749 0844', icon: <User className="w-4 h-4" /> }
+              { label: 'Gte. Suplente: Eloy Moreno', val: '314 893 8973', icon: <User className="w-4 h-4" /> }
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-6 md:gap-8 py-8 grow group" role="listitem">
                 <div className="w-12 h-12 bg-slate-50 flex items-center justify-center shrink-0 group-hover:bg-[#0D2E5C] group-hover:text-brand-green transition-all text-[#0D2E5C]" aria-hidden="true">{item.icon}</div>
