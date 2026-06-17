@@ -3,11 +3,14 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import { defineConfig, loadEnv } from 'vite';
 
-export default defineConfig(({ mode }) => {
+export default defineConfig(({ mode, command }) => {
   const env = loadEnv(mode, '.', '');
+  const isDev = command === 'serve';
+  const isVercel = !!process.env.VERCEL;
+
   return {
     plugins: [react(), tailwindcss()],
-    base: '/construc_acm1/',
+    base: (isDev || isVercel) ? '/' : '/construc_acm1/',
     define: {
       // Variables de entorno accesibles via process.env en el código
       'process.env.GOOGLE_MAPS_PLATFORM_KEY':  JSON.stringify(env.GOOGLE_MAPS_PLATFORM_KEY),
