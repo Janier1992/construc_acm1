@@ -7,7 +7,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
   return {
     plugins: [react(), tailwindcss()],
-    base: '/',
+    base: '/construc_acm1/',
     define: {
       // Variables de entorno accesibles via process.env en el código
       'process.env.GOOGLE_MAPS_PLATFORM_KEY':  JSON.stringify(env.GOOGLE_MAPS_PLATFORM_KEY),
